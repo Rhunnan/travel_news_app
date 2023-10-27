@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_news_app/components/profileAndSearchBar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,11 +12,31 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Null,
+      home: const HomePage(),
     );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+        body: Column(
+      children: [
+        ProfileAndSearchBar(),
+      ],
+    ));
   }
 }
