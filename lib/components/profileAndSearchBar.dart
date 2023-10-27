@@ -62,7 +62,7 @@ class _ProfileAndSearchBarState extends State<ProfileAndSearchBar> {
                     decoration: InputDecoration(
                         hintStyle: TextStyle(
                             fontSize: 12, fontWeight: FontWeight.w400),
-                        hintText: "Search for article",
+                        hintText: "Search for article...",
                         border: InputBorder.none),
                   ),
                 ),

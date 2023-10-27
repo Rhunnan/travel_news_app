@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_news_app/components/first_page_horizontalSroll.dart';
 import 'package:travel_news_app/components/profileAndSearchBar.dart';
 
 void main() {
@@ -36,6 +37,7 @@ class _HomePageState extends State<HomePage> {
         body: Column(
       children: [
         ProfileAndSearchBar(),
+        HorizontalScrollFirstPage(),
       ],
     ));
   }
