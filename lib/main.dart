@@ -4,7 +4,6 @@ import 'package:travel_news_app/components/firstPageLowerPartScrollBar.dart';
 import 'package:travel_news_app/components/first_page_horizontalSroll.dart';
 import 'package:travel_news_app/components/navigationComponent.dart';
 import 'package:travel_news_app/components/profileAndSearchBar.dart';
-import 'package:travel_news_app/components/secondPage.dart';
 
 void main() {
   runApp(const MyApp());
