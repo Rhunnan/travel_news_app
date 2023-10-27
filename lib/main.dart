@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:travel_news_app/components/firstPageLowerPartScrollBar.dart';
 import 'package:travel_news_app/components/first_page_horizontalSroll.dart';
+import 'package:travel_news_app/components/navigationComponent.dart';
 import 'package:travel_news_app/components/profileAndSearchBar.dart';
-import 'package:travel_news_app/components/first_page_horizontalSroll.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,7 +53,25 @@ class _HomePageState extends State<HomePage> {
               }),
             ),
           ),
-        )
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 10, right: 150, bottom: 10),
+          child: Text(
+            "Short For You",
+            style:
+                GoogleFonts.dmSans(fontSize: 17, fontWeight: FontWeight.w700),
+          ),
+        ),
+        SizedBox(
+            height: 90,
+            width: 300,
+            child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 6,
+                itemBuilder: (context, index) {
+                  return (const LowerPartHorizontalScrollFirstPage());
+                })),
+        const NavigationComponents(),
       ],
     ));
   }

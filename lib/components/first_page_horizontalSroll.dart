@@ -1,5 +1,4 @@
-import 'dart:math';
-
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -92,7 +91,7 @@ class HorizontalScrollFirstPage extends StatelessWidget {
                       width: 37,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
-                          color: const Color.fromARGB(255, 240, 238, 238)),
+                          color: Color.fromRGBO(246, 248, 248, 1)),
                       child: Image.asset("assets/images/share_icon.png"),
                     ),
                   )
