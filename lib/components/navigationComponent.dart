@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:travel_news_app/components/secondPage.dart';
+import 'package:travel_news_app/components/thirdPage.dart';
 
 class NavigationComponents extends StatelessWidget {
   const NavigationComponents({super.key});
@@ -64,11 +65,19 @@ class NavigationComponents extends StatelessWidget {
                     "assets/images/notification_unselected_icon.svg"),
               ),
             ),
-            SizedBox(
-              height: 20,
-              width: 20,
-              child:
-                  SvgPicture.asset("assets/images/profile_unselected_icon.svg"),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ThirdPage()),
+                );
+              },
+              child: SizedBox(
+                height: 20,
+                width: 20,
+                child: SvgPicture.asset(
+                    "assets/images/profile_unselected_icon.svg"),
+              ),
             ),
           ],
         ),
