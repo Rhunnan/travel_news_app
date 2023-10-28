@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:travel_news_app/components/secondPage.dart';
 import 'package:travel_news_app/components/thirdPage.dart';
+import 'package:travel_news_app/main.dart';
 
 class NavigationComponents extends StatelessWidget {
   const NavigationComponents({super.key});
@@ -34,12 +35,21 @@ class NavigationComponents extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 53, right: 53),
-              child: SizedBox(
-                height: 20,
-                width: 20,
-                child: SvgPicture.asset("assets/images/home_selected_icon.svg"),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomePage()),
+                );
+              },
+              child: Padding(
+                padding: const EdgeInsets.only(left: 53, right: 53),
+                child: SizedBox(
+                  height: 20,
+                  width: 20,
+                  child:
+                      SvgPicture.asset("assets/images/home_selected_icon.svg"),
+                ),
               ),
             ),
             InkWell(
